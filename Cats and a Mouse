@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+
+char* catAndMouse(int x,int y,int z){
+    if( abs(z-x) < abs(z-y) )
+        return "Cat A";
+    else if( abs(z-y) < abs(z-x) )
+        return "Cat B";
+    else
+        return "Mouse C";
+}
+
+int main()
+{
+    int x,y,z,q;
+    char* result;
+    scanf("%d",&q);
+    for(int i=0;i<q;i++){
+        scanf("%d%d%d",&x,&y,&z);
+        result = catAndMouse(x,y,z);
+        printf("%s\n",result);
+    }
+    return 0;
+}
